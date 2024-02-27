@@ -2,9 +2,11 @@
 
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 import { randomBytes } from 'crypto';
+import { useSearchParams } from 'next/navigation';
 
 export default function Search({ placeholder }: { placeholder: string }) {
-  function hanldeSearch(term: string) {}
+  const searchParams = useSearchParams;
+  function hanldeSearch(term: string) {
   return (
     <div className="relative flex flex-1 flex-shrink-0">
       <label htmlFor="search" className="sr-only">
