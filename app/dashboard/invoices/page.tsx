@@ -14,7 +14,7 @@ interface InvoicePageInterface {
 }
 
 export default async function Page({ searchParams }: InvoicePageInterface) {
-  const query = searchParams?.query || '';
+  const query = searchParams?.query || "";
   const currentPage = Number(searchParams?.page) || 1;
 
   return (
