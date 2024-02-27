@@ -1,13 +1,16 @@
 'use client';
 
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
-import { randomBytes } from 'crypto';
 import { useSearchParams } from 'next/navigation';
 
 export default function Search({ placeholder }: { placeholder: string }) {
-  const searchParams = useSearchParams;
+  const searchParams = useSearchParams();
   function hanldeSearch(term: string) {
-    
+    const params = new URLSearchParams(searchParams);
+    if (!term) {
+      params.delete('query');
+    }
+    params.set('query', term);
   }
 
   return (
