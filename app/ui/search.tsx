@@ -1,8 +1,10 @@
 'use client';
 
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
+import { randomBytes } from 'crypto';
 
 export default function Search({ placeholder }: { placeholder: string }) {
+  function hanldeSearch(term: string) {}
   return (
     <div className="relative flex flex-1 flex-shrink-0">
       <label htmlFor="search" className="sr-only">
